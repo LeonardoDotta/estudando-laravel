@@ -1,0 +1,129 @@
+.headerDashboard {
+    height: 10vh;
+    background-color: rgb(51, 175, 212);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentAndSideBar {
+    display: flex;
+}
+
+.sideBarDashboard {
+    width: 15vw;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentDashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+.addSerie {
+    background-color: #d9e0d9;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.footerDashboard {
+    height: 20vh;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listGroup {
+    max-height: 300px;
+    overflow-y: scroll;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 8px;
+}
+
+.listGroupItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: var(--bs-body-bg);
+}
+
+.createScreen {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.createLabel {
+    margin: 10px;
+}
+
+.createInput {
+    border-radius: 10px;
+}
+
+.createButton {
+    margin: 10px;
+    background-color: black;
+    border-color: black;
+}
+
+.createButton:hover {
+    margin: 10px;
+    background-color: rgb(211, 32, 32);
+    border-color: rgb(211, 32, 32);
+}
+
+.createImg {
+    border-radius: 20px;
+}
+
+.deleteButton {
+    border-radius: 10px;
+    background-color: darkgray;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.deleteButton:hover {
+    background-color: rgb(204, 44, 44);
+}
+
+.svg {
+    width: 24px;
+    height: 24px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;               /* Largura da barra de rolagem */
+    height: 12px;              /* Altura da barra de rolagem horizontal */
+  }
+
+  /* Estilizando a trilha da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;       /* Cor de fundo da trilha */
+  }
+
+  /* Estilizando o polegar da barra de rolagem */
+  ::-webkit-scrollbar-thumb {
+    background: #888;          /* Cor do polegar */
+    border-radius: 10px;       /* Cantos arredondados */
+  }
+
+  /* Estilizando o polegar da barra de rolagem quando está em hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;          /* Cor do polegar ao passar o mouse */
+  }

@@ -29,16 +29,20 @@ class SeriesController extends Controller
     {
         $serieName = $request->input('nome');
 
-        DB::insert('insert into series (nome) values (?)', [$serieName]);
-        return redirect('/dashboard');
+        // DB::insert('insert into series (nome) values (?)', [$serieName]);
+
+        Serie::create(['nome'=>$serieName]);
+        return redirect('/');
     }
 
     public function storeMovies(Request $request)
     {
         $movieName = $request->input('nome');
 
-        DB::insert('insert into movies (nome) values (?)', [$movieName]);
-        return redirect('/dashboard');
+        // DB::insert('insert into movies (nome) values (?)', [$movieName]);
+
+        Movie::create(['nome'=>$movieName]);
+        return redirect('/');
     }
 
     public function storeSongs(Request $request)
@@ -46,7 +50,7 @@ class SeriesController extends Controller
         $songName = $request->input('nome');
 
         DB::insert('insert into songs (nome) values (?)', [$songName]);
-        return redirect('/dashboard');
+        return redirect('/');
     }
 
     public function importacoes()
@@ -65,8 +69,19 @@ class SeriesController extends Controller
         // Dentro do compact do with, series e movies dentro de string significam as variáveis
     }
 
-    public function destroySeries()
+    public function destroySeries(Request $request)
     {
-        
+        $series= Serie::findOrFail((Integer)$request->id);
+        $series->delete();
+
+        return redirect('/')->with('msg', 'Evento concluído!');
+    }
+
+    public function destroyMovies(Request $request)
+    {
+        $movies= Movie::findOrFail((Integer)$request->id);
+        $movies->delete();
+
+        return redirect('/')->with('msg', 'Evento concluído!');
     }
 }
